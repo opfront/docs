@@ -9,6 +9,12 @@ build:
               wget https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb -O /tmp/hugo.deb
               dpkg -i /tmp/hugo.deb
               rm /tmp/hugo.deb
+    - script:
+      name: Install Node
+      code: |
+        apt-get install curl python-software-properties
+        curl -sL https://deb.nodesource.com/setup_7.x | bash -
+        apt-get install nodejs
 
     - script:
         name: Build docs
