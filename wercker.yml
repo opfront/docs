@@ -26,3 +26,11 @@ build:
         name: Build docs
         code: |
           sh ./build.sh
+
+deploy:
+  steps:
+    - s3sync:
+      key_id: $AWS_ACCESS_S3_KEY_ID
+      key_secret: $AWS_ACCESS_S3_KEY_SECRET
+      bucket_url: $AWS_S3_BUCKET_URL
+      source_dir: public/
