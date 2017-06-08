@@ -1,0 +1,36 @@
+box: ruby
+
+# Build definition
+build:
+  steps:
+    - script:
+            name: Install Hugo
+            code: |
+              apt-get update
+              wget https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb -O /tmp/hugo.deb
+              dpkg -i /tmp/hugo.deb
+              rm /tmp/hugo.deb
+
+    - install-packages:
+        packages: curl python-software-properties
+
+    - script:
+      name: Get Node PPA
+      code: |
+        curl -sL https://deb.nodesource.com/setup_7.x | bash -
+
+    - install-packages:
+        packages: nodejs
+
+    - script:
+        name: Build docs
+        code: |
+          sh ./build.sh
+
+deploy:
+  steps:
+    - s3sync:
+      key_id: $AWS_ACCESS_S3_KEY_ID
+      key_secret: $AWS_ACCESS_S3_KEY_SECRET
+      bucket_url: $AWS_S3_BUCKET_URL
+      source_dir: public/
