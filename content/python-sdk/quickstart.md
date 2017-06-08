@@ -15,11 +15,12 @@ For example, in a typical workflow, you would use a `Resource` provided by the S
 ## Ordering a Random Product
 Let's say we want to order a random product (*we don't advise you actually do this*).
 
-First, we'll need to create an opfront session. The session handles all requests made to our API and manages your credentials if need be.
+First, we'll need to create an opfront session. The session handles all requests made to our API and manages your credentials if need be (If you don't have your credentials yet, please contact our [sales team](https://opfront.ca/en/#contact)).
 ```python
 from opfront import OpfrontSession
 
-opfront = OpfrontSession()
+opfront = OpfrontSession(email='myemail@domain.tld', password='p455w0rd')
+
 ```
 
 Once our session is established, we'll need our store's product list in order for us to pick which one we'll order.
