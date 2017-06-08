@@ -5,13 +5,6 @@ toc = true
 weight = 7
 
 +++
-
-## SDK Structure
-Before digging deeper into the operations supported by the SDK, we need to introduce the endpoint-independent `Resource` and `Model` classes, which are used by throughout the SDK.
-The resource represents a *queryable* and *writeable* collection of items managed by the API, while the model manages an single *editable* and *deletable* entity in our system.
-
-For example, in a typical workflow, you would use a `Resource` provided by the SDK to create, get, and list objects. These operations all return `Model` instances (each of them representing a single API entity), which can then be used to edit and delete that specific entity.
-
 ## Resource Operations
 #### `OpfrontResource.__call__(self, **kwargs)`
 

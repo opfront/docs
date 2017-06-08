@@ -6,7 +6,13 @@ weight = 4
 
 +++
 
-### Ordering a Random Product
+## SDK Structure
+Before digging deeper into the operations supported by the SDK, we need to introduce the endpoint-independent `Resource` and `Model` classes, which are used by throughout the SDK.
+The resource represents a *queryable* and *writeable* collection of items managed by the API, while the model manages an single *editable* and *deletable* entity in our system.
+
+For example, in a typical workflow, you would use a `Resource` provided by the SDK to create, get, and list objects. These operations all return `Model` instances (each of them representing a single API entity), which can then be used to edit and delete that specific entity.
+
+## Ordering a Random Product
 Let's say we want to order a random product (*we don't advise you actually do this*).
 
 First, we'll need to create an opfront session. The session handles all requests made to our API and manages your credentials if need be.

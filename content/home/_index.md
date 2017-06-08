@@ -10,3 +10,5 @@ weight = 0
 # Home
 
 Welcome to the Opfront Documentation Center!
+
+For information regarding our REST API and usage examples, head over to our [API Documentation](/api). For a more in-depth look at our [Python](/python-sdk) and [JavaScript](/js-sdk) SDKs, as well as some implementation tips, take a look at the sidebar.

@@ -2,7 +2,7 @@
 date = "2017-06-02T16:39:35-04:00"
 title = "Exceptions"
 toc = true
-weight = 5
+weight = 10
 
 +++
 
