@@ -89,3 +89,60 @@ curl "/auth/refresh"
 Parameter | Required | Type | Default | Description
 --------- | -------- | ---- | ------- | -----------
 refresh_token | Yes | String | - | Refresh token for which to generate an auth token.
+
+## Fetch Current User
+Our API also exposes a way to fetch the profile of an authenticated user.
+
+> Example Request
+
+```python
+from opfront import OpfrontSession
+
+client = OpfrontSession(
+  email="user@domain.com",
+  password="12345asdf"
+)
+
+user = client.user.me()
+```
+
+```javascript
+```
+
+```shell
+curl "/users/me"
+  -X GET \
+  -H "X-Auth-Token: YOUR_TOKEN"
+```
+
+> Example Response
+
+```json
+{
+	"data": {
+		"city": "Quebec",
+		"confirmed": true,
+		"country": "Canada",
+		"created_at": "2017-06-22T14:11:46.818000+00:00",
+		"date_of_birth": null,
+		"email": "test2@opfront.ca",
+		"eyesight_condition": null,
+		"face_type": null,
+		"first_name": "John",
+		"gender": "M",
+		"id": 12,
+		"is_admin": false,
+		"last_name": "Doe",
+		"modified_at": "2017-06-22T14:11:46.818000+00:00",
+		"phone": null,
+		"postal_code": null,
+		"province": "QC",
+		"street_address": null
+	},
+	"status_code": 200
+}
+```
+
+### HTTP Request
+
+`GET https://api.opfront.ca/users/me`
