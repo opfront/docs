@@ -17,7 +17,7 @@ build:
     - script:
       name: Get Node PPA
       code: |
-        curl -sL https://deb.nodesource.com/setup_7.x | bash -
+        curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
     - install-packages:
         packages: nodejs
