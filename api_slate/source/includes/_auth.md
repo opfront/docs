@@ -134,7 +134,7 @@ curl "/users/me"
 		"is_admin": false,
 		"last_name": "Doe",
 		"modified_at": "2017-06-22T14:11:46.818000+00:00",
-		"phone": null,
+		"phone": "1234567890",
 		"postal_code": null,
 		"province": "QC",
 		"street_address": null
