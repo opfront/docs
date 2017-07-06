@@ -15,6 +15,11 @@ build:
         packages: curl python-software-properties
 
     - script:
+      name: Clean up APT lists
+      code: |
+        rm -rf /var/lib/apt/lists/*
+
+    - script:
       name: Get Node PPA
       code: |
         curl -sL https://deb.nodesource.com/setup_8.x | bash -
