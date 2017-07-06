@@ -186,9 +186,12 @@ for product in client.product.list(summary=True, store_id=3, synced=False):
 ### Query Parameters
 All query parameters defined in the [standards](#list-objects) plus:
 
+<aside class="notice">It is mandatory to specify store_id <i>or</i> banner_id, no need to specify both.</aside>
+
 Parameter | Required | Description
 --------- | -------- | -----------
 store_id | ✔️ | ID of the store to query
+banner_id | ✔️ | ID of the banner to query
 spec_filters | ✖️ | URL-encoded JSON filter object used to filter products by their spectacle's attributes
 
 
