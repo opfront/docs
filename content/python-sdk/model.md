@@ -56,6 +56,10 @@ Get a generator that iterates lazily over all entities matching the specified fi
 
 #### `Model.save(self):`
 Updates the model instance (or creates it if it does not yet exist).
+{{% notice note %}}
+Since the model performs an additional HTTP request to check if the instance already exists,
+you can also force creation using `OpfrontResource().create(Model)` or force update using `OpfrontResource().update(Model)`.
+{{% /notice%}}
 
 **Returns:** Model instance (with updated attributes & generated ID, if applicable)
 
