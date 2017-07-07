@@ -12,7 +12,7 @@ name | ✔️ | String | - | ✔️ | ✔️ | Name of the product
 external_id | ✔️ | String | - | ✔️ | ✔️ | ID of the product in the store's system
 description | ✔️ | String | - | ✔️ | ✔️ | Description of the product
 store_id | ✔️ | Int | - | ✔️ | ✔️ | ID of the store to which the product belongs
-spectacle_id | ✔️ | String | - | ✔️ | ✔️ | ID of the spectacle attached to the product
+spectacle_id |✖️| String | - | ✔️ | ✔️ | ID of the spectacle attached to the product
 quantity | ✖️ | Int | `null` | ✔️ | ✔️ | In-store product quantity (`null` when quantity unknown)
 price | ✖️ | Float | `null` | ✔️ | ✔️ | Price of the product (`null` when price unknown)
 external_sku | ✖️ | String | `null` | ✔️ | ✔️ | SKU of the product in the store's inventory
