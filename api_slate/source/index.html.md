@@ -13,6 +13,7 @@ toc_footers:
 includes:
   - standards
   - auth
+  - banner
   - order
   - product
   - spectacle

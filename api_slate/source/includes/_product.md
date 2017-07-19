@@ -12,7 +12,7 @@ name | ✔️ | String | - | ✔️ | ✔️ | Name of the product
 external_id | ✔️ | String | - | ✔️ | ✔️ | ID of the product in the store's system
 description | ✔️ | String | - | ✔️ | ✔️ | Description of the product
 store_id | ✔️ | Int | - | ✔️ | ✔️ | ID of the store to which the product belongs
-spectacle_id | ✔️ | String | - | ✔️ | ✔️ | ID of the spectacle attached to the product
+spectacle_id |✖️| String | - | ✔️ | ✔️ | ID of the spectacle attached to the product
 quantity | ✖️ | Int | `null` | ✔️ | ✔️ | In-store product quantity (`null` when quantity unknown)
 price | ✖️ | Float | `null` | ✔️ | ✔️ | Price of the product (`null` when price unknown)
 external_sku | ✖️ | String | `null` | ✔️ | ✔️ | SKU of the product in the store's inventory
@@ -186,9 +186,12 @@ for product in client.product.list(summary=True, store_id=3, synced=False):
 ### Query Parameters
 All query parameters defined in the [standards](#list-objects) plus:
 
+<aside class="notice">It is mandatory to specify store_id <i>or</i> banner_id, no need to specify both.</aside>
+
 Parameter | Required | Description
 --------- | -------- | -----------
 store_id | ✔️ | ID of the store to query
+banner_id | ✔️ | ID of the banner to query
 spec_filters | ✖️ | URL-encoded JSON filter object used to filter products by their spectacle's attributes
 
 

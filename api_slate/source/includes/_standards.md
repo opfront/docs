@@ -225,7 +225,7 @@ Error Code | Meaning
 ---------- | -------
 400 | Bad Request -- Some fields are missing / invalid
 401 | Unauthorized -- No token provided / Invalid token
-403 | Forbidden -- Resource for administrators only
+403 | Forbidden -- You do not have access to this resource
 404 | Not Found -- Specified resource does not exist
 405 | Method Not Allowed -- You tried to access a resource with an invalid HTTP method
 409 | Conflict -- You tried to create a resource that already exists

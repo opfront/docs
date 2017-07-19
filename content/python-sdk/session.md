@@ -35,6 +35,7 @@ Head over to our [REST API Documentation](/api) for more details concerning reso
 
 | Resource  | Endpoint      |        Attribute Name        |
 |-----------|---------------|:----------------------------:|
+| Banner    | `/banners`    | `OpfrontSession().banner`     |
 | Order     | `/orders`     | `OpfrontSession().order`     |
 | Product   | `/products`   | `OpfrontSession().product`   |
 | Spectacle | `/spectacles` | `OpfrontSession().spectacle` |

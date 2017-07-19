@@ -20,6 +20,11 @@ to fetch does not exist.
 `BadRequestError` is the SDK equivalent of an HTTP 400. It means that you tried to create or update a resource
 with an invalid payload. Refer to the [api documentation](/api) for more details on the different models in use by the Opfront API.
 
+## `ForbiddenError`
+*bases: Exception*
+
+`ForbiddenError` is the SDK equivalent of an HTTP 403. It means you tried to access a restricted resource.
+
 ### `UnexpectedError`
 *Bases: Exception*
 
