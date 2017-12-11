@@ -51,3 +51,4 @@ manufacturer_url | ✖️ | String | `null` | ✔️ | ✔️ | Manufacturer web
 images | ✖️ | Object | {} | ✔️ | ✖️ | Images of the spectacle
 sizes | ✖️ | List\<Object\> | [] | ✔️ | ✖️ | Different spectacle dimensions
 variants | ✖️ | List\<Object\> | [] | ✔️ | ✖️ | Different spectacle variants
+is_premium | ✖️ | Boolean | `false` | ✔️ | ✔️ | Whether the spectacle's pictures are of premium quality
